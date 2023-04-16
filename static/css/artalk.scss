@@ -1,0 +1,25 @@
+.tk-comments-container {
+  .tk-comment {
+    margin-bottom: 20px;
+  }
+
+  .tk-content {
+    padding: 10px;
+    border-radius: 5px;
+    background: #f3f3f3;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+.tk-meta-input {
+  flex-wrap: wrap;
+  margin: 0;
+
+  .el-input {
+    margin: 0 0 10px !important;
+    flex: none;
+    width: 100%;
+  }
+}

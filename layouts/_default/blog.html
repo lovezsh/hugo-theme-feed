@@ -1,0 +1,21 @@
+{{ partial "header.html" . }}
+
+<div class="single-header">
+  <a href="/">首页</a>
+  <a href="javascript:void(0)" id="startSearch">搜索</a>
+</div>
+
+{{ range (where .Data.Pages "Type" "in" site.Params.mainSections).GroupByDate "2006" -}}
+<section>
+  <h2>{{ .Key }}</h2>
+
+  {{ range .Pages }}
+  <a class="postitem" href="{{ .RelPermalink }}">
+    <div class="title">{{ .Title }}</div>
+    <time datetime="{{ .Date.Format " 2006-01-02 15:04:05 MST" }}">
+      {{ .Date.Format "2006年01月02日"}}</time>
+  </a>
+  {{ end }}
+</section>
+{{ end }}
+{{ partial "footer.html" . }}

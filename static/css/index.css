@@ -1,0 +1,152 @@
+@font-face {
+  font-family: "LXGWNeoXiHei";
+  src: url(../fonts/LXGWNeoXiHei.ttf);
+}
+body {
+  background: #fff;
+  font-family: "LXGWNeoXiHei";
+  max-width: 660px;
+  margin: 30px auto;
+  padding: 30px 15px;
+  box-sizing: border-box;
+  color: #24292f;
+  line-height: 1.75;
+  font-size: 1em;
+  overflow-y: scroll;
+}
+
+a {
+  color: #24292f;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.9;
+  text-decoration: underline;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  text-decoration: none;
+  margin-right: 15px;
+}
+.nav img {
+  height: 16px;
+}
+
+.subscribe {
+  text-align: center;
+}
+
+.postitem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  transition: all 0.1s linear;
+  border-radius: 4px;
+  padding: 4px 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.postitem:hover {
+  background: #eee;
+  text-decoration: none;
+}
+.postitem .title {
+  text-decoration: none;
+  font-size: 18px;
+}
+.postitem time {
+  font-size: 14px;
+}
+
+main section {
+  margin-top: 30px;
+}
+
+.single-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.single-header a {
+  color: #336bad;
+}
+
+footer {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pagination li {
+  list-style: none;
+  padding: 0;
+}
+
+.single-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.single-date {
+  opacity: 0.8;
+  display: block;
+  font-size: 15px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .postitem {
+    display: block;
+  }
+  .postitem a {
+    display: block;
+  }
+}
+.post-content a {
+  text-decoration: underline;
+}
+
+#user {
+  text-align: center;
+}
+#user img {
+  padding: 4px;
+  border: 1px solid #eaeaea;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 30px auto 0;
+  border-radius: 50%;
+}
+#user h1 {
+  font-size: 26px;
+  margin-top: 20px;
+  color: #42505a;
+  font-weight: 400;
+}

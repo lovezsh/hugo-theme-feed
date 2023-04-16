@@ -1,0 +1,14 @@
+<div id="tcomment"></div>
+<script src="https://cdn.staticfile.org/twikoo/1.6.15/twikoo.all.min.js"></script>
+<link rel="stylesheet" href="{{ .Site.Params.staticPrefix }}{{ "css/artalk.css" | relURL }}">
+<script>
+  const isDev = location.hostname === 'localhost';
+  if(!isDev){
+    twikoo.init({
+      envId: 'https://twikoo.zburu.com',
+      el: '#tcomment',
+    })
+  }else{
+    document.getElementById('tcomment').innerText = '正处于开发模式下，不调用twikoo！'
+  }
+</script>

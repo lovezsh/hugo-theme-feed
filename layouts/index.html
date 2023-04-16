@@ -1,0 +1,44 @@
+{{ partial "header.html" . }}
+<div>
+  <div id="user">
+    <img src="https://img.zburu.com/author1.png" alt="">
+    <h1><a href="/">子舒 Blog</a></h1>
+  </div>
+  <div class="nav">
+    <a href="/index.xml" target="_blank">
+      RSS
+    </a>
+    {{ range .Site.Params.socials }}
+    <a href="{{ .link }}">{{ .name }}</a>
+    {{ end }}
+    <a href="javascript:void(0)" id="startSearch">搜索</a>
+  </div>
+</div>
+<section>
+  <div class="subscribe">
+    前端程序员，喜欢折腾一些技术，研究各种奇怪的程序和网站。<br>
+    <a href="https://zburu.com/" rel="noopener noreferrer" target="_blank">Blog</a> /
+    <a href="https://github.com/lovezsh/" rel="noopener noreferrer" target="_blank">Github</a> /
+    <a href="https://weekly.zsh.im/" rel="noopener noreferrer" target="_blank">Weekly</a>
+  </div>
+</section>
+<br>
+<section>
+  <div class="postlist">
+    {{ $pages := .Site.RegularPages }}
+    {{ $paginator := .Paginate ($pages) }}
+    {{ range $paginator.Pages }}
+    {{ $title := .Title }}
+    {{ $summary := .Summary }}
+    <a class="postitem" href="{{ .RelPermalink }}">
+      <div class="title">{{ .Title }}</div>
+      <time datetime="{{ .Date.Format " 2006-01-02 15:04:05 MST" }}">
+        {{ .Date.Format "2006年01月02日"}}</time>
+
+      <!-- <div class="summary">{{ .Summary }}</div> -->
+    </a>
+    {{ end }}
+  </div>
+  {{ partial "pagination.html" . }}
+</section>
+{{ partial "footer.html" . }}
